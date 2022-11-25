@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 
 function AddTodo(props) {
-  const [todo, setTodo] = useState({
-    id: 0,
-    desc: "",
-    isDone: false
-  });
+  const [todo, setTodo] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
-      ...todo
+      isDone: false,
+      desc: todo
     });
+
+    setTodo('');
   }
 
   const handleChange = e => {
-    setTodo({...todo, desc: e.target.value});
+    setTodo(e.target.value);
   }
 
   return (

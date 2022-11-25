@@ -11,7 +11,6 @@ function Todos() {
     }
 
     setTodos([x,...todos]);
-    console.log(...todos);
   }
 
   const completeTodo = complete_id => {
@@ -29,11 +28,19 @@ function Todos() {
     setTodos([...todos].filter(todo => todo.id != delete_id));
   }
 
+  const editTodo = (edit_id, new_todo) => {
+    if (!new_todo.desc) {
+      return;
+    }
+
+    setTodos(p => p.map(it => (it.id === edit_id ? new_todo : it)));
+  }
+
   return (
     <div>
       <h1> React Todo App </h1>
       <AddTodo onSubmit={addTodo}/>
-      <Todo todos={todos} completeTodo={completeTodo} deleteTodo={deleteTodo}/>
+      <Todo todos={todos} completeTodo={completeTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
     </div>
   )
 }
