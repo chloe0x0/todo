@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function AddTodo(props) {
   const [todo, setTodo] = useState('');
+
+  const todoRef = useRef(null);
+
+
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -27,8 +31,9 @@ function AddTodo(props) {
           placeholder='Add a todo' 
           value={todo.desc} 
           name="desc" 
-          className="add-todo" 
-          onChange={handleChange}/>
+          className="todo-input" 
+          onChange={handleChange}
+          ref = {todoRef}/>
         <button className="add-button"> Add Todo </button>
       </form>
     </div>

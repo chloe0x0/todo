@@ -27,7 +27,6 @@ function Todo({todos, completeTodo, deleteTodo, editTodo}) {
     <div className={todo.isDone ? 'complete' : 'not-complete'} key={index}>
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.desc}
-        {todo.id}
       </div>
       <div className="icons">
         <RiCloseCircleLine className="remove-icon" onClick={() => deleteTodo(todo.id)}/>

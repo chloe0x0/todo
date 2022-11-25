@@ -1,13 +1,97 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Trebuchet MS';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  margin: 32px 0;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  text-align: center;
 }
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(24, 13, 176) 0%,
+    rgb(46, 6, 61) 100%
+  );
+}
+
+.React-Todo-App {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  background-color: rgb(64, 34, 134);
+  justify-content: start;
+  width: 520px;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  background:rgb(10, 10, 10);
+  margin: 120px auto;
+  min-height: 600;
+}
+
+.add-button {
+  padding: 16px;
+  border: none; 
+  border-radius: 0 4px 4px 0;
+  cursor: pointer; 
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  text-transform: capitalize;
+}
+
+.not-complete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(126, 20, 255) 0%,
+    rgb(207, 17, 255) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+
+.add-todo {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.remove-icon {
+  margin-right: 5px;
+  color:#fff;
+}
+
+.edit-icon {
+  color:#fff;
+}
+
